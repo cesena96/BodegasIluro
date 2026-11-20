@@ -1,5 +1,17 @@
+import { useTranslation } from 'react-i18next';
 import { Typography } from "@mui/material";
 
 export default function History() {
-    return <Typography variant="h1">Historia</Typography>;
+    const {t} = useTranslation('history')
+
+    return (
+        <>
+            <Typography 
+                variant="h1"
+            >
+                {t('title')}
+            </Typography>
+        </>
+        
+    )
 }
