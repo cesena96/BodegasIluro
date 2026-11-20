@@ -1,0 +1,30 @@
+{
+    "title": "Nuestra historia",
+    "intro": "Iluro es el nombre romano de Mataró, y desde aquí viajaban en ánforas los vinos de la antigua Layetania. Bodegas Iluro nació para recuperar esa tradición: vinos hechos con paciencia, cerca de la tierra donde crecen las viñas.",
+
+    "milestones.title": "Un camino entre viñas",
+    "milestones.1.year": "1948",
+    "milestones.1.title": "Las primeras cepas",
+    "milestones.1.text": "Nuestro abuelo planta las primeras cepas en una pequeña ladera del Maresme, para el vino de la casa.",
+    "milestones.2.year": "1975",
+    "milestones.2.title": "La primera bodega",
+    "milestones.2.text": "Se levanta la bodega de piedra y llegan las primeras barricas de roble. El vino empieza a salir de la familia.",
+    "milestones.3.year": "1999",
+    "milestones.3.title": "Segunda generación",
+    "milestones.3.text": "Los hijos toman el relevo, renuevan el viñedo y pasan a cultivar con menos intervención y más respeto por el suelo.",
+    "milestones.4.year": "Hoy",
+    "milestones.4.title": "Una selección para tu mesa",
+    "milestones.4.text": "Elegimos cada año los mejores vinos de nuestras viñas y de bodegas vecinas, y los llevamos a tu casa.",
+
+    "values.title": "Lo que nos mueve",
+    "values.1.title": "Raíces",
+    "values.1.text": "Conocemos la tierra, la historia de Iluro y a la gente que trabaja las viñas.",
+    "values.2.title": "Paciencia",
+    "values.2.text": "Cada vino tarda lo que necesita. No tenemos prisa, y se nota en la copa.",
+    "values.3.title": "Compartir",
+    "values.3.text": "Un buen vino sabe mejor en la mesa de todos. Por eso lo ofrecemos a un precio honesto.",
+
+    "cta.title": "¿Hablamos?",
+    "cta.text": "Cuéntanos qué buscas y te ayudaremos a elegir.",
+    "cta.button": "Ir a contacto"
+}
