@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import ContactForm from '../../components/contact/ContactForm';
 import MapEmbed from '../../components/contact/MapEmbed';
+import PageTitle from '../../components/shared/PageTitle';
 
 export default function Contact() {
     const { t } = useTranslation('contact');

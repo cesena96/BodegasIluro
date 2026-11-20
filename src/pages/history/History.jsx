@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import Tile from '../../components/shared/Tile';
 import manosVid from '../../assets/history/manos-vid.jpg';
+import PageTitle from '../../components/shared/PageTitle';
 
 const MILESTONES = [1, 2, 3, 4];
 const VALUES = [1, 2, 3];
