@@ -1,0 +1,28 @@
+{
+    "title": "Contacto",
+    "intro": "¿Quieres conocer nuestros vinos o hacer un pedido? Escríbenos y te responderemos lo antes posible.",
+
+    "info.title": "Visítanos",
+    "info.hours.label": "Horario",
+    "info.hours.value": "De lunes a sábado, de 10:00 a 14:00 y de 17:00 a 20:00",
+    "info.email.label": "Correo",
+    "info.email.value": "hola@bodegasiluro.example",
+    "info.address.label": "Dirección",
+
+    "form.title": "Envíanos un mensaje",
+    "form.name": "Nombre",
+    "form.email": "Correo electrónico",
+    "form.message": "Mensaje",
+    "form.privacy": "Acepto que Bodegas Iluro use mis datos para responder a mi consulta",
+    "form.submit": "Enviar mensaje",
+    "form.sent": "Mensaje enviado. Te responderemos lo antes posible.",
+    "form.failed": "No se ha podido enviar el mensaje. Inténtalo de nuevo.",
+
+    "error.required": "Este campo es obligatorio",
+    "error.email": "Introduce un correo electrónico válido",
+    "error.messageMin": "El mensaje debe tener al menos {{count}} caracteres",
+    "error.privacy": "Debes aceptar para poder enviar el mensaje",
+
+    "map.title": "Dónde estamos",
+    "map.iframeTitle": "Mapa con la ubicación de Bodegas Iluro"
+}
