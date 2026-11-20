@@ -4,6 +4,7 @@ import Tile from '../../components/shared/Tile';
 import manosVid from '../../assets/history/manos-vid.jpg';
 
 const MILESTONES = [1, 2, 3, 4];
+const VALUES = [1, 2, 3];
 
 export default function History() {
     const { t } = useTranslation('history')
@@ -17,14 +18,14 @@ export default function History() {
                 {t('intro')}
             </Typography>
             <Grid container spacing={1.5} sx={{ mt: 4 }}>
-            <Grid size={{ xs: 12, md: 6 }} sx={{ display: 'flex' }}>
-                <Tile
-                    variant="photo"
-                    image={manosVid}
-                    imageAlt={t('milestones.photoAlt')}
-                    sx={{ minHeight: { xs: 260, md: 360 } }}
-                />
-            </Grid>
+                <Grid size={{ xs: 12, md: 6 }} sx={{ display: 'flex' }}>
+                    <Tile
+                        variant="photo"
+                        image={manosVid}
+                        imageAlt={t('milestones.photoAlt')}
+                        sx={{ minHeight: { xs: 260, md: 360 } }}
+                    />
+                </Grid>
                 <Grid size={{ xs: 12, md: 6 }}>
                     <Typography variant="h2" sx={{ fontSize: { xs: '1.5rem', md: '2.25rem' }, mb: 3 }}>
                         {t('milestones.title')}
@@ -45,6 +46,24 @@ export default function History() {
                         ))}
                     </Stack>
                 </Grid>
+            </Grid>
+
+            <Typography variant="h2" sx={{ fontSize: { xs: '1.5rem', md: '2.25rem' }, mt: 8, mb: 3 }}>
+                {t('values.title')}
+            </Typography>
+            <Grid container spacing={1.5}>
+                {VALUES.map((n) => (
+                    <Grid key={n} size={{ xs: 12, md: 4 }}>
+                        <Box sx={{ bgcolor: 'custom.tile', p: 3, height: '100%' }}>
+                            <Typography variant="h6" component="h3" sx={{ fontWeight: 700, mb: 1 }}>
+                                {t(`values.${n}.title`)}
+                            </Typography>
+                            <Typography variant="body2">
+                                {t(`values.${n}.text`)}
+                            </Typography>
+                        </Box>
+                    </Grid>
+                ))}
             </Grid>
         </Box>
     )
