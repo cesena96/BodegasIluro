@@ -14,13 +14,7 @@ export default function Contact() {
 
     return (
         <Box sx={{ py: { xs: 2, md: 4 } }}>
-            <Typography variant="h1" sx={{ fontSize: { xs: '2rem', md: '3.5rem' }, mb: 2 }}>
-                {t('title')}
-            </Typography>
-            <Typography variant="body1" sx={{ maxWidth: '65ch', mb: 4 }}>
-                {t('intro')}
-            </Typography>
-
+            <PageTitle title={t('title')} intro={t('intro')} />
             <Grid container spacing={3}>
                 <Grid size={{ xs: 12, md: 5 }}>
                     <Box sx={{ bgcolor: 'custom.tile', p: 3, height: '100%' }}>

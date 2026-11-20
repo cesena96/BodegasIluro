@@ -11,13 +11,8 @@ export default function History() {
 
     return (
         <Box sx={{ py: { xs: 2, md: 4 } }}>
-            <Typography variant="h1" sx={{ fontSize: { xs: '2rem', md: '3.5rem' }, mb: 2 }}>
-                {t('title')}
-            </Typography>
-            <Typography variant="body1" sx={{ maxWidth: '65ch' }}>
-                {t('intro')}
-            </Typography>
-            <Grid container spacing={1.5} sx={{ mt: 4 }}>
+            <PageTitle title={t('title')} intro={t('intro')} />
+            <Grid container spacing={1.5}>
                 <Grid size={{ xs: 12, md: 6 }} sx={{ display: 'flex' }}>
                     <Tile
                         variant="photo"
