@@ -1,0 +1,23 @@
+{
+    "title": "Catalogue",
+    "intro": "A selection of our wines, chosen for their origin, their ageing and the patience with which they were made.",
+
+    "filter.label": "Filter by type",
+    "filter.all": "All",
+
+    "type.red": "Red",
+    "type.white": "White",
+    "type.rose": "Rosé",
+    "type.sparkling": "Sparkling",
+
+    "vintage": "Vintage {{year}}",
+
+    "wine.1.description": "A red from Alella with a Mediterranean character. Ripe black fruit and wild-herb notes, with a short ageing in oak.",
+    "wine.2.description": "Our flagship wine. Old-vine Grenache and Carignan from Priorat, with long barrel ageing. Deep, mineral and built to last.",
+    "wine.3.description": "An elegant Penedès reserve, three years between barrel and bottle. Round, spiced and with a long finish.",
+    "wine.4.description": "Pansa blanca, the historic grape of Alella. Fresh and saline, with a hint of sea breeze and white flowers.",
+    "wine.5.description": "A barrel-fermented white from Penedès. Creamy, with stone fruit and a very fine toasty touch.",
+    "wine.6.description": "A pale, gently pressed rosé from Alella. Delicate, with notes of strawberry and petals, ideal as an aperitif.",
+    "wine.7.description": "A Gran Reserva cava with fine, creamy bubbles. Over thirty months of ageing, with notes of brioche and baked apple.",
+    "wine.8.description": "Brut Nature Gran Reserva, with no added sugar. More than five years on the lees: complex, dry and with a very elegant bubble."
+}

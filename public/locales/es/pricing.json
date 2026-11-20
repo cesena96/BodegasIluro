@@ -1,0 +1,23 @@
+{
+    "title": "Catálogo",
+    "intro": "Una selección de nuestros vinos, elegidos por su origen, su crianza y la paciencia con la que se han hecho.",
+
+    "filter.label": "Filtrar por tipo",
+    "filter.all": "Todos",
+
+    "type.red": "Tinto",
+    "type.white": "Blanco",
+    "type.rose": "Rosado",
+    "type.sparkling": "Espumoso",
+
+    "vintage": "Añada {{year}}",
+
+    "wine.1.description": "Tinto de Alella con carácter mediterráneo. Fruta negra madura y notas de monte bajo, con una crianza breve en roble.",
+    "wine.2.description": "Nuestro vino insignia. Garnacha y cariñena de cepas viejas del Priorat, con una larga crianza en barrica. Profundo, mineral y de gran guarda.",
+    "wine.3.description": "Reserva elegante del Penedès, con tres años entre barrica y botella. Redondo, especiado y de final largo.",
+    "wine.4.description": "Pansa blanca, la uva histórica de Alella. Fresco y salino, con un recuerdo de brisa marina y flor blanca.",
+    "wine.5.description": "Blanco del Penedès fermentado en barrica. Cremoso, con fruta de hueso y un toque tostado muy fino.",
+    "wine.6.description": "Rosado pálido de Alella, de prensado suave. Delicado, con aromas de fresa y pétalos, ideal para el aperitivo.",
+    "wine.7.description": "Cava Gran Reserva de burbuja fina y cremosa. Más de treinta meses de crianza, con notas de brioche y manzana asada.",
+    "wine.8.description": "Brut Nature Gran Reserva, sin azúcar añadido. Más de cinco años sobre lías: complejo, seco y con una burbuja muy elegante."
+}
