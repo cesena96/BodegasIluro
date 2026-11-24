@@ -15,6 +15,7 @@
     "form.message": "Message",
     "form.privacy": "I agree that Bodegas Iluro may use my data to answer my enquiry",
     "form.submit": "Send message",
+    "form.sending": "Sending...",
     "form.sent": "Message sent. We will reply as soon as possible.",
     "form.failed": "The message could not be sent. Please try again.",
 

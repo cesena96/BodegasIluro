@@ -16,10 +16,10 @@ i18n.use(Backend)
         fallbackLng: {
             default: ["es"],
         },
-        debug: true,
+        debug: false,
         defaultNS: "core",
         interpolation: {
-            escapeValue: false, // react already safes from xss
+            escapeValue: false,
         },
     });
 

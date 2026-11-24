@@ -4,9 +4,11 @@
     "nav.history": "Our History",
     "nav.pricing": "Catalogue",
     "nav.contact": "Contact",
+    "notfound.title": "404 Page not found",
     "footer.title": "Footer",
     "footer.address": "Carrer d'Iluro 1, 08302, Mataró (Barcelona) - Spain",
     "a11y.menu": "Open menu",
     "a11y.language": "Language",
     "a11y.theme": "Toggle theme"
+    
 }

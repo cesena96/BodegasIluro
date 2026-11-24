@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import {
+    Alert,
     Box,
     Button,
     Checkbox,
@@ -12,14 +14,43 @@ import {
 
 export default function ContactForm() {
     const { t } = useTranslation('contact');
-    const { control, handleSubmit, reset } = useForm({
+    const [status, setStatus] = useState(null);
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors, isSubmitting },
+    } = useForm({
         defaultValues: { name: '', email: '', message: '', privacy: false },
     });
 
-    function onSubmit(data) {
-        // TODO: envío real del correo, pendiente de hablar con el profesor
-        console.log(data);
-        reset();
+    async function onSubmit(data) {
+        setStatus(null);
+        try {
+            const response = await fetch('https://formsubmit.co/ajax/aantolincesena@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                },
+                body: JSON.stringify({
+                    name: data.name,
+                    email: data.email,
+                    message: data.message,
+                    _subject: 'Nuevo mensaje desde Bodegas Iluro',
+                }),
+            });
+            const result = await response.json();
+
+            if (response.ok && String(result.success) === 'true') {
+                setStatus('success');
+                reset();
+            } else {
+                setStatus('error');
+            }
+        } catch {
+            setStatus('error');
+        }
     }
 
     return (
@@ -29,81 +60,59 @@ export default function ContactForm() {
             onSubmit={handleSubmit(onSubmit)}
             sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
         >
-            <Controller
-                name="name"
-                control={control}
-                rules={{ required: t('error.required') }}
-                render={({ field, fieldState }) => (
-                    <TextField
-                        {...field}
-                        label={t('form.name')}
-                        autoComplete="name"
-                        fullWidth
-                        error={!!fieldState.error}
-                        helperText={fieldState.error?.message}
-                    />
-                )}
+            <TextField
+                {...register('name', { required: t('error.required') })}
+                label={t('form.name')}
+                autoComplete="name"
+                fullWidth
+                error={!!errors.name}
+                helperText={errors.name?.message}
             />
 
-            <Controller
-                name="email"
-                control={control}
-                rules={{
+            <TextField
+                {...register('email', {
                     required: t('error.required'),
                     pattern: { value: /^\S+@\S+\.\S+$/, message: t('error.email') },
-                }}
-                render={({ field, fieldState }) => (
-                    <TextField
-                        {...field}
-                        type="email"
-                        label={t('form.email')}
-                        autoComplete="email"
-                        fullWidth
-                        error={!!fieldState.error}
-                        helperText={fieldState.error?.message}
-                    />
-                )}
+                })}
+                type="email"
+                label={t('form.email')}
+                autoComplete="email"
+                fullWidth
+                error={!!errors.email}
+                helperText={errors.email?.message}
             />
 
-            <Controller
-                name="message"
-                control={control}
-                rules={{
+            <TextField
+                {...register('message', {
                     required: t('error.required'),
                     minLength: { value: 10, message: t('error.messageMin', { count: 10 }) },
-                }}
-                render={({ field, fieldState }) => (
-                    <TextField
-                        {...field}
-                        label={t('form.message')}
-                        multiline
-                        rows={5}
-                        fullWidth
-                        error={!!fieldState.error}
-                        helperText={fieldState.error?.message}
-                    />
-                )}
+                })}
+                label={t('form.message')}
+                multiline
+                rows={5}
+                fullWidth
+                error={!!errors.message}
+                helperText={errors.message?.message}
             />
 
-            <Controller
-                name="privacy"
-                control={control}
-                rules={{ required: t('error.privacy') }}
-                render={({ field, fieldState }) => (
-                    <FormControl error={!!fieldState.error}>
-                        <FormControlLabel
-                            control={<Checkbox checked={field.value} onChange={field.onChange} />}
-                            label={t('form.privacy')}
-                        />
-                        {fieldState.error && (
-                            <FormHelperText>{fieldState.error.message}</FormHelperText>
-                        )}
-                    </FormControl>
-                )}
-            />
+            <FormControl error={!!errors.privacy}>
+                <FormControlLabel
+                    control={<Checkbox {...register('privacy', { required: t('error.privacy') })} />}
+                    label={t('form.privacy')}
+                />
+                {errors.privacy && <FormHelperText>{errors.privacy.message}</FormHelperText>}
+            </FormControl>
 
-            <Button type="submit" variant="contained" sx={{ alignSelf: 'flex-start' }}>
-                {t('form.submit')}
+            {status === 'success' && <Alert severity="success">{t('form.sent')}</Alert>}
+            {status === 'error' && <Alert severity="error">{t('form.failed')}</Alert>}
+
+            <Button
+                type="submit"
+                variant="contained"
+                disabled={isSubmitting}
+                sx={{ alignSelf: 'flex-start' }}
+            >
+                {isSubmitting ? t('form.sending') : t('form.submit')}
             </Button>
         </Box>
     );

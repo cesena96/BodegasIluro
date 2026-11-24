@@ -1,16 +1,17 @@
-import  { NavLink } from "react-router-dom"
+// src/pages/NotFound.jsx
+import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { rutasConNombre } from "../services/router";
 
 export default function NotFound() {
+    const { t } = useTranslation('core');
+
     return (
         <>
-            <h1>404 Pagina no encontrada</h1>
+            <h1>{t('notfound.title')}</h1>
             <nav>
-                <NavLink to={rutasConNombre.HOME}>Home</NavLink>
-                | 
-                <NavLink to={rutasConNombre.CONTACT}>Contact</NavLink>
+                <NavLink to={rutasConNombre.HOME}>{t('nav.home')}</NavLink>
             </nav>
         </>
-           
     );
 }
